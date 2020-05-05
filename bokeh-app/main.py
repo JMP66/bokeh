@@ -19,11 +19,11 @@
     "from bokeh.tile_providers import CARTODBPOSITRON, get_provider,OSM, STAMEN_TERRAIN\n",
     "\n",
     "#Load data\n",
-    "mid_dyn = pd.read_csv(\"../data/MiddleSchools_2006-2018_clean.csv\")\n",
-    "high_dyn = pd.read_csv(\"../data/HighSchools_2006-2018_clean.csv\")\n",
+    "mid_dyn = pd.read_csv(\"data/MiddleSchools_2006-2018_clean.csv\")\n",
+    "high_dyn = pd.read_csv(\"data/HighSchools_2006-2018_clean.csv\")\n",
     "\n",
-    "mid_stat = pd.read_csv(\"../data/MiddleSchools_2018_clean.csv\")\n",
-    "high_stat = pd.read_csv(\"../data/HighSchools_2018_clean.csv\")"
+    "mid_stat = pd.read_csv(\"data/MiddleSchools_2018_clean.csv\")\n",
+    "high_stat = pd.read_csv(\"data/HighSchools_2018_clean.csv\")"
    ]
   },
   {
