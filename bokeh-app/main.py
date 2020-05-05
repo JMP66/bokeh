@@ -14,7 +14,7 @@ from bokeh.layouts import column, row, widgetbox
 from bokeh.models import CustomJS, Slider, Div,RangeSlider, Button,RadioGroup,LinearAxis, Range1d, ColumnDataSource, Paragraph,Select
 import numpy as np
 from bokeh.plotting import figure, output_file, show
-#from bokeh.tile_providers import CARTODBPOSITRON, get_provider,OSM, STAMEN_TERRAIN
+from bokeh.tile_providers import CARTODBPOSITRON, get_provider,OSM, STAMEN_TERRAIN
 #import math
 from bokeh.io import output_file, show, save, curdoc, output_notebook, export_png
 
@@ -225,11 +225,11 @@ def create_plot():
     
     #Get map
     x,y = geographic_to_web_mercator(data['lon'].iloc[0],data['lat'].iloc[0])
-    #tile_provider = get_provider(CARTODBPOSITRON)
+    tile_provider = get_provider(CARTODBPOSITRON)
     # range bounds supplied in web mercator coordinates
     m = figure(x_range=(x-500, x+500), y_range=(y-500, y+500),height=300,width=300, 
                x_axis_location=None, y_axis_location=None,toolbar_location='below',tools="pan,wheel_zoom,reset",active_scroll='auto')
-    #m.add_tile(tile_provider)
+    m.add_tile(tile_provider)
     square=m.circle(x=x,y=y,size=12, fill_color="midnightblue", fill_alpha=1)
     tooltips = [('Name', data['school_name'].iloc[0]),('Address', data['address'].iloc[0])]
     m.add_tools(HoverTool(renderers=[square],tooltips=tooltips))
