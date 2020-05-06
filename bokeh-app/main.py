@@ -19,8 +19,8 @@ from bokeh.tile_providers import CARTODBPOSITRON, get_provider,OSM, STAMEN_TERRA
 colors=['#7bccc4','#4eb3d3','#2b8cbe','#0868ac','#084081']
 
 #Load data
-mid_dyn = pd.read_csv("../data/MiddleSchools_2006-2018_clean.csv")
-mid_stat = pd.read_csv("../data/MiddleSchools_2018_clean.csv")
+mid_dyn = pd.read_csv(join(dirname(__file__), "data/MiddleSchools_2006-2018_clean.csv"))
+mid_stat = pd.read_csv(join(dirname(__file__), "data/MiddleSchools_2018_clean.csv"))
 
 
 nums =['female_rate', 'male_rate', 'asian_rate', 'black_rate', 'hispanic_rate',
