@@ -164,7 +164,7 @@ def create_plot():
    
     #Add overview paragraph
     para = Div(text=text,
-    width=275, height=400,style={'font-size': '90%'})
+    width=265, height=400,style={'font-size': '90%'})
     
     cols=[ 'school_name',
      'category',
@@ -248,7 +248,7 @@ def create_plot():
             TableColumn(field="data", title="",width=1000),
        
         ]
-    table = DataTable(source=source, columns=columns, width=220, height=450, fit_columns=False,index_position=None) 
+    table = DataTable(source=source, columns=columns, width=210, height=450, fit_columns=False,index_position=None) 
     
     #Get map
     x,y = geographic_to_web_mercator(data['lon'].iloc[0],data['lat'].iloc[0])
@@ -300,8 +300,8 @@ div6 = Div(text="<b> </b>")
 #Combine all controls to get in column
 col1= column(div1,text_input,div2,radio_group,div3,m, width=250)
 col2 = column(div6, layout, width=450)
-col3 = column(div5,table, width=225)
-col4 = column(div4, para, width=275)
+col3 = column(div5,table, width=215)
+col4 = column(div4, para, width=265)
 #Layout
 layout = row(col1,col2,col3,col4)
 
